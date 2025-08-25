@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "testmod",
+	"version": "${version}",
+	"name": "Test Mod",
+	"description": "Test mod made for testing",
+	"authors": [
+		"Volnix"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/diaz8219/test-minecraft-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/testmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.volnix.testmod.TestMod"
+		],
+		"fabric-datagen": [
+			"net.volnix.testmod.TestModDataGenerator"
+		],
+        "client": [
+            "net.volnix.testmod.TestModClient"
+        ]
+	},
+	"mixins": [
+		"testmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.18.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
